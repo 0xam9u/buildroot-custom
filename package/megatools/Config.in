@@ -1,0 +1,6 @@
+config BR2_PACKAGE_MEGATOOLS
+	bool "megatools"
+	help
+	  Open-source command line tools for accessing Mega.co.nz cloud storage
+
+	  https://megous.com/git/megatools
