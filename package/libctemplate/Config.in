@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBCTEMPLATE
+  bool "libctemplate"
+  help
+    C Template is a template expander library written in C and is 
+    similar to the perl HTML::Template module.
+
+    http://libctemplate.sourceforge.net/

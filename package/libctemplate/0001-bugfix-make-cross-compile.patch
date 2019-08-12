@@ -1,0 +1,14 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	2009-03-30 16:50:08.000000000 +0200
++++ b/Makefile	2019-08-12 18:30:01.125434000 +0200
+@@ -4,8 +4,8 @@
+ 	$(CC) $(CFLAGS) -o template -L . main.o -lctemplate
+ 
+ libctemplate.a: ctemplate.o
+-	ar r libctemplate.a ctemplate.o
+-	ranlib libctemplate.a
++	$(AR) r libctemplate.a ctemplate.o
++	$(RANLIB) libctemplate.a
+ 
+ ctemplate.o: ctemplate.c ctemplate.h
+ 
