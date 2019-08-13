@@ -25,4 +25,11 @@ define LIBCTEMPLATE_INSTALL_STAGING_CMDS
 	cp $(@D)/*.a $(STAGING_DIR)/usr/lib/
 endef
 
+define LIBCTEMPLATE_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib
+	cp $(@D)/*.so.* $(TARGET_DIR)/usr/lib/
+	ln -sf $(TARGET_DIR)/usr/lib/libctemplate.so.1.0 $(TARGET_DIR)/usr/lib/libctemplate.so.1
+	ln -sf $(TARGET_DIR)/usr/lib/libctemplate.so.1   $(TARGET_DIR)/usr/lib/libctemplate.so
+endef
+
 $(eval $(generic-package))

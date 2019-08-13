@@ -1,0 +1,20 @@
+--- a/Makefile	2019-08-13 16:02:58.209505972 +0200
++++ b/Makefile	2019-08-13 15:50:50.519821499 +0200
+@@ -1,12 +1,15 @@
+-CFLAGS = -I .
++CFLAGS = -fPIC -I .
+ 
+-template: main.o libctemplate.a
++template: main.o libctemplate.a libctemplate.so
+ 	$(CC) $(CFLAGS) -o template -L . main.o -lctemplate
+ 
+ libctemplate.a: ctemplate.o
+ 	$(AR) r libctemplate.a ctemplate.o
+ 	$(RANLIB) libctemplate.a
+ 
++libctemplate.so: libctemplate.a
++	$(CC) -shared -Wl,-soname,libctemplate.so.1 -o libctemplate.so.1.0 *.o
++
+ ctemplate.o: ctemplate.c ctemplate.h
+ 
+ main.o: main.c ctemplate.h
