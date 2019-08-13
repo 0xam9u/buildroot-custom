@@ -20,10 +20,10 @@ define LIBCTEMPLATE_BUILD_CMDS
 endef
 
 define LIBCTEMPLATE_INSTALL_STAGING_CMDS
-	mkdir -p $(TARGET_DIR)/usr/include/libctemplate
-	cp $(@D)/*.h $(TARGET_DIR)/usr/include/libctemplate/
-	mkdir -p $(TARGET_DIR)/usr/lib
-	cp $(@D)/*.a $(TARGET_DIR)/usr/lib/
+	mkdir -p $(STAGING_DIR)/usr/include/libctemplate
+	cp $(@D)/*.h $(STAGING_DIR)/usr/include/libctemplate/
+	mkdir -p $(STAGING_DIR)/usr/lib
+	cp $(@D)/*.a $(STAGING_DIR)/usr/lib/
 endef
 
 $(eval $(generic-package))
