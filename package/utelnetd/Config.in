@@ -4,4 +4,4 @@ config BR2_PACKAGE_UTELNETD
 	  The utelnetd package provides a small and efficient stand alone telnet
 	  server daemon.
 
-	  https://public.pengutronix.de/software/utelnetd/
+	  http://www.pengutronix.de/software/utelnetd/download

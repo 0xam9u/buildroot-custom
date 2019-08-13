@@ -6,7 +6,7 @@
 
 UTELNETD_VERSION = 0.1.11
 UTELNETD_SOURCE = utelnetd-$(UTELNETD_VERSION).tar.gz
-UTELNETD_SITE = https://public.pengutronix.de/software/utelnetd
+UTELNETD_SITE = http://www.pengutronix.de/software/utelnetd/download
 
 define UTELNETD_BUILD_CMDS
   $(TARGET_MAKE_ENV) $(MAKE) -C $(@D) \
