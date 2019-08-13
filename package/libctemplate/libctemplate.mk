@@ -23,6 +23,9 @@ define LIBCTEMPLATE_INSTALL_STAGING_CMDS
 	cp $(@D)/*.h $(STAGING_DIR)/usr/include/libctemplate/
 	mkdir -p $(STAGING_DIR)/usr/lib
 	cp $(@D)/*.a $(STAGING_DIR)/usr/lib/
+	cp $(@D)/*.so.* $(STAGING_DIR)/usr/lib/
+	ln -sf $(STAGING_DIR)/usr/lib/libctemplate.so.1.0 $(STAGING_DIR)/usr/lib/libctemplate.so.1
+	ln -sf $(STAGING_DIR)/usr/lib/libctemplate.so.1   $(STAGING_DIR)/usr/lib/libctemplate.so
 endef
 
 define LIBCTEMPLATE_INSTALL_TARGET_CMDS
