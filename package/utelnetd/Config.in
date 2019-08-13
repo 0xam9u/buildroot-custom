@@ -1,0 +1,7 @@
+config BR2_PACKAGE_UTELNETD
+	bool "utelnetd"
+	help
+	  The utelnetd package provides a small and efficient stand alone telnet
+	  server daemon.
+
+	  https://public.pengutronix.de/software/utelnetd/
