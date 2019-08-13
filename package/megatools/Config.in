@@ -1,5 +1,8 @@
 config BR2_PACKAGE_MEGATOOLS
 	bool "megatools"
+	select BR2_PACKAGE_LIBCURL
+	select BR2_PACKAGE_LIBGLIB2
+	select BR2_PACKAGE_OPENSSL
 	help
 	  Open-source command line tools for accessing Mega.co.nz cloud storage
 
